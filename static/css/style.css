@@ -422,6 +422,11 @@ blockquote cite {
 }
 
 em {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffdfef));
   background: linear-gradient(transparent 60%, #ffdfef 0%);
+}
+
+hr {
+  height: 2px;
+  background: repeating-linear-gradient( 45deg, #fefefe, #fefefe 5px, #003f90 5px, #003f90 10px);
+  border: none;
 }
