@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="{{ delimit .Site.Params.Keywords ", " }}" name="keywords">
+<meta content="{{ .Site.Params.Author }}" name="author">
+<meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ .Site.Params.Description }}">
+<meta property="og:type" content="website" />
+<title>{{ if eq .IsHome true }}{{ .Site.Title }} - {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Handlee">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
+</head>

@@ -1,0 +1,19 @@
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-item">
+        {{ partial "profile" . }}
+      </div>
+    </div>
+    <p class="copyright">{{ .Site.Copyright | safeHTML }}</p>
+  </div>
+</footer>
+
+{{ if .Site.Params.highlight.theme }}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.highlight.theme }}.min.css" />
+{{ end }}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

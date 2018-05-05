@@ -1,0 +1,5 @@
+<ul class="categories">
+{{ range . }}
+  <li class="categories-item"><a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ end }}
+</ul>

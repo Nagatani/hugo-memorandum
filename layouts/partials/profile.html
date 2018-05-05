@@ -1,0 +1,14 @@
+<div class="profile-container">
+  <img src="{{ .Site.BaseURL }}image/profile.jpg" alt="profile-photo">
+  <div class="profile-text-container">
+    <h3 class="profile-name">{{ .Site.Params.author }}</h3>
+    <p class="profile-text">{{ .Site.Params.profile | safeHTML }}</p>
+    <nav>
+      <ul class="social">
+      {{ range .Site.Params.social }}
+      <li class="social-item"><a href="{{ .url }}"><span class="icon"><i class="{{ .fa_icon_class }}"></i></span></a></li>
+      {{ end }}
+      </ul>
+    </nav>
+  </div>
+</div>

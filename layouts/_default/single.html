@@ -1,0 +1,32 @@
+{{ partial "header" . }}
+<body>
+{{ partial "nav" . }}
+<main class="single">
+  <div class="container">
+    <article>
+      <p class="meta-date">{{ if .Site.Params.DateForm }}{{ .Date.Format .Site.Params.DateForm }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }} {{ if (ne ($.Param "displayauthor") false) }}by {{ .Params.author | default .Site.Params.author }}{{ end }}</p>
+      <h1 class="title">{{ if .Draft }}[Draft]{{ end }}{{ .Title }}</h1>
+      <div class="post-meta">
+        <p class="meta-categories">
+          {{ if .Params.categories }}
+            {{ partial "categories" .Params.categories }}
+          {{ end }}
+          {{ if and .Params.categories .Params.tags }}
+            <span>&nbsp;-&nbsp;</span>
+          {{ end }}
+          {{ if .Params.tags }}
+            {{ partial "tags" .Params.tags }}
+          {{ end }}
+        </p>
+      </div>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</main>
+
+{{ if .Site.DisqusShortname }}{{ partial "disqus" . }}{{ end }}
+
+{{ partial "footer" . }}
+</body>

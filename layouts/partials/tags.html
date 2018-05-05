@@ -1,0 +1,5 @@
+<ul class="tags">
+{{ range . }}
+  <li class="tags-item"><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ end }}
+</ul>

@@ -1,0 +1,26 @@
+<section class="pagination">
+  <div class="container">
+    <nav class="pagination-nav">
+      <div class="pagination-prev">
+        {{ if .Paginator.HasPrev }}
+        <a class="button" href="{{ .Paginator.Prev.URL }}">
+          <span class="icon is-small is-marginless">
+            <i class="fa fa-angle-left"></i>
+          </span>
+          新しい記事
+        </a>
+        {{ end }}
+      </div>
+      <div class="pagination-next">
+        {{ if .Paginator.HasNext }}
+        <a class="button" href="{{ .Paginator.Next.URL }}">
+          古い記事
+          <span class="icon is-small is-marginless">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+        {{ end }}
+      </div>
+    </nav>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<header>
+  <div class="container">
+    <div class="blog-title">
+      <h1><a class="nav-item" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+      <div><small>{{ .Site.Params.description }}</small></div>
+    </div>
+    <ul class="social">
+      {{ range .Site.Params.social }}
+      <li class="social-item"><a href="{{ .url }}"><span class="icon"><i class="{{ .fa_icon_class }}"></i></span></a></li>
+      {{ end }}
+    </ul>
+  </div>
+</header>
