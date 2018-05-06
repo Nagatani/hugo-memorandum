@@ -5,6 +5,10 @@ Simple [hugo](https://gohugo.io/) theme.
 Sample Site: https://nagatani.github.io
 
 ## How to use this theme
+
+日本語での説明は以下よりどうぞ。
+- <a href="https://nagatani.github.io/posts/hugo-theme-created/" target="_blank">Hugoのテーマ作りました。 | Memorandum</a>
+
 ### Download
 
 Clone this repository into your Hugo project.
