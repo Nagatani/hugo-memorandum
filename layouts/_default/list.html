@@ -21,7 +21,7 @@
         </p>
       </div>
       <p class="content content-summary">
-        {{ .Summary | plainify | safeHTML }} ...
+        {{ .Summary | plainify | safeHTML }}{{ if .Truncated }} ... {{ end }}
       </p>
       {{ if .Truncated }}
       <div class="read-more">
