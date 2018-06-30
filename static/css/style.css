@@ -415,3 +415,27 @@ hr {
 .footnotes ol {
   margin-top: 1rem;
 }
+
+/* Share */
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.share a {
+  display: block;
+  flex: 1;
+  text-align: center;
+  border: 1px solid #eee;
+  font-size: 1.5rem;
+  line-height: 1;
+  height: 2em;
+  padding: .5em;
+}
+.share a:hover {
+  background-color: #00a381;
+  color: #f0f0f0;
+}
+.share .twitter:hover { background-color: #008DDE; }
+.share .facebook:hover { background-color: #2e4a88; }
+.share .googleplus:hover { background-color: #CC3622; }
