@@ -39,6 +39,7 @@ summarylength = 200
   profile = "世知辛い世の中を静かに暮らしたい<br><a href=\"https://nagatani.me/\" target=\"_blank\">https://nagatani.me/</a>"
   displayauthor = false
   DateForm = "2006-01-02"
+  sharingicons = true
 
 [params.highlight]
 theme = "monokai-sublime"

@@ -1,8 +1,5 @@
-    <div class="nav-left">
-    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://plus.google.com/share?url={{ .Permalink }}" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink }}" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://twitter.com/home?status={{ .Title }} - {{ .Permalink }}" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
-    <a class="nav-item" href="http://www.reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
-    <!-- <a class="nav-item" href="mailto:?subject={{ .Title }}&body={{ .Content }}" title="Share via Email" target="_blank"><span class="fa fa-envelope fa-2x" aria-hidden="true"></span></a> -->
-    </div>
+<aside class="share">
+  <a class="twitter" href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton" onclick="window.open(this.href, 'shareWindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-twitter"></i></a>
+  <a class="facebook" href="https://www.facebook.com/sharer.php?u={{ .Permalink }}&t={{ .Title }}" onclick="window.open(this.href, 'shareWindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook"></i></a>
+  <a class="googleplus" href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'shareWindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-google-plus"></i></a>
+</aside>
